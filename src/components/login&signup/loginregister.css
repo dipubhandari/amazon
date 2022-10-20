@@ -1,0 +1,72 @@
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    background-color: lightslategray;
+    height: 100vh;
+}
+
+.login_title {
+    margin: auto;
+    padding: 13px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.content {
+    background-color: lightslategray;
+    margin: auto;
+    color: aliceblue;
+    padding: 120px;
+    display: flex;
+    /* box-shadow: 0 0 10px 10px lightgreen; */
+    flex-direction: column;
+}
+
+.login_text {
+
+    margin: auto;
+    padding: 13px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    background-color: orange;
+}
+
+.form_login {
+    display: grid;
+    width: 20%;
+    margin: auto;
+    padding: 12px;
+}
+
+select {
+    margin: 1px;
+    padding: 10px;
+}
+
+.msg {
+    color: aquamarine;
+}
+
+.age {
+    margin: auto;
+}
+
+.login_btn {
+    background-color: orange;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    border: none;
+    color: aliceblue;
+}
+
+.form_login input {
+    margin: 10px;
+    height: 30px;
+    font-family: sans-serif;
+}
+
+.signup_text {
+    color: aliceblue;
+    margin: auto;
+}
