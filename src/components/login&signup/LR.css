@@ -5,18 +5,19 @@
 }
 
 .container {
-    background-color: lightslategray;
-    height: 100vh;
+    background-color: black;
+    min-height: 100vh;
+    width: 100%;
 }
 
-.login_title {
-    margin: auto;
-    padding: 13px;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-}
 
+.login_title span img{
+    width: 100px;
+    display: flex;
+    margin: auto 400px;
+}
 .content {
-    background-color: lightslategray;
+    background-color: black;
     margin: auto;
     color: aliceblue;
     padding: 120px;
@@ -37,7 +38,7 @@
     display: grid;
     width: 20%;
     margin: auto;
-    padding: 12px;
+    /* padding: 12px; */
 }
 
 select {
@@ -50,7 +51,8 @@ select {
 }
 
 .age {
-    margin: auto;
+    margin: 0;
+    display: flex;
 }
 
 .login_btn {
