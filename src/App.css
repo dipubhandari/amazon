@@ -1,7 +1,9 @@
+.footer{
+    background-color: beige;
+}
 .app {
     background-color: lightgrey;
 }
-
 .all {
 
     display: grid;

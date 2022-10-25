@@ -1,23 +1,82 @@
-.aid{
+.aid {
     display: flex;
-        width: 100%;
-    margin-top: 8px;
+    width: 100%;
+    margin: 8px 0px;
 }
-.aidImage{
+
+.aidImage {
     flex: 9;
 }
-.aidImage img{
-}
-.asket_title{
-    color: chartreuse;
-        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-se
-    font-size: 21px;
+
+.aidImage img {}
+
+.asket_title {
     font-weight: bold;
     display: block;
+
+
+    width: 50%;
+    font-family: 'Courier New', Courier, monospace;
+    margin: auto;
+  }
+
+.hatau {
+    background-color: orange;
+    width: 80%;
+    color: #fff;
+
+
+    padding: 5px;
 }
-.sub__total{
-    background-color: lightgray;
+
+.sub__total {
+    background-color: rgb(199, 206, 214);
     flex: 2;
+    display: grid;
     margin-right: 30px;
-rif;
+    padding: 10px;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.add__container {
+    width: 100%;
+    display: flex;
+    width: 50%;
+    min-height: 300px;
+    margin: 9px 70px;
+    border: 1px solid grey;
+}
+
+.leftCartImage img {
+    display: flex;
+    height: 100%;
+    width: 100%;
+}
+
+.leftCartImage {
+       padding: 20px;
+    height: auto;
+    width: 50%;
+}
+
+.rightCart {
+    display: flex;
+    font-weight: bold;
+    flex-direction: column;
+    gap: 30px;
+    width: 100%;
+    justify-content: center;
+    align-items: flex-start;
+    margin: 10px;
+}
+.gradeicon{
+    color: orange;
+}
+.sub__total button {
+    color: aliceblue;
+    font-weight: normal;
+    padding: 2px;
+    background-color: orange;
 }

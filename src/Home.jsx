@@ -3,6 +3,7 @@ import './App.css';
 import Header from './components/header/Header';
 import Banner from './components/Banner/Banner';
 import Products from './components/Product/Products';
+import Footer from './components/Footer/Footer';
 
 function Home() {
   return (
@@ -20,8 +21,10 @@ function Home() {
         <Products />
 
       </div>
-
-
+       
+       <div className='footer'>
+        <Footer/>
+       </div>
 
     </div>
   );
