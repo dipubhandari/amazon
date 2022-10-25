@@ -3,6 +3,7 @@ import React from 'react'
 import LocationOnIcon from '@mui/icons-material/LocationOn';
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 import SearchIcon from '@mui/icons-material/Search';
+import { Link } from 'react-router-dom';
 const Header = () => {
     return (
         <div className='header'>
@@ -34,10 +35,12 @@ const Header = () => {
             <div className="order">
                 <span>Returns </span><b>& Order</b>
             </div>
-            <div className="cart">
-     <ShoppingCartIcon />
-                <span>Cart</span>
-            </div>
+            
+            <div className="cartfirst_div">
+                <small className='notification'>11</small>
+                <Link to="/cart" className='cart'> <ShoppingCartIcon />               <span>Cart</span>
+                </Link>
+                </div>
         </div>
     )
 }

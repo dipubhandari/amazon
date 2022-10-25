@@ -1,0 +1,23 @@
+.aid{
+    display: flex;
+        width: 100%;
+    margin-top: 8px;
+}
+.aidImage{
+    flex: 9;
+}
+.aidImage img{
+}
+.asket_title{
+    color: chartreuse;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-se
+    font-size: 21px;
+    font-weight: bold;
+    display: block;
+}
+.sub__total{
+    background-color: lightgray;
+    flex: 2;
+    margin-right: 30px;
+rif;
+}

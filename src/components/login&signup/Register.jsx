@@ -3,7 +3,7 @@ import './LR.css'
 const Register = () => {
   return (
     <div>
-          <section className="container"> <br/>
+          <section className="containerlogin"> <br/>
               <section className="content">
                   <h1 className="login_title"><span><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcThqGQTQ3FusJOaIcrrpeMDc6ZfBCtxfsAAzA&usqp=CAU" alt="" /></span> <noframes></noframes></h1>
                   <section>

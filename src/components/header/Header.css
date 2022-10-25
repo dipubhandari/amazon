@@ -86,11 +86,26 @@
     display: grid;
 
 }
-
+.cartfirst_div{
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    display: grid;
+}
 .cart {
     font-size: 11px;
     flex: 1;
     justify-content: center;
     align-items: center;
     display: flex;
+    color: #ffff;
+    cursor: pointer;
+}
+.notification{
+    width: 10px;
+    background-color: red;
+    font-size: 7px;
+    display: inline;
+    border-radius: 50%;
+    border: 2px solid red;
 }

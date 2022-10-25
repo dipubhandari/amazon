@@ -18,7 +18,7 @@ function Home() {
       </div>
       <div className='all'>
         <Products />
-        <Products />
+
       </div>
 
 
