@@ -29,18 +29,19 @@ const Header = () => {
             </div>
 
             <div className="hello" id="user">
-                <b>Hello, sign in</b>
-                <span>Account & List</span>
+
+
+                <Link to='/login' className="hello"> <h4>Hello,<span> sign in</span></h4></Link>
             </div>
             <div className="order">
-                <span>Returns </span><b>& Order</b>
+                <span>All </span><b><Link to='/orders' className='hello'>ORDERS</Link> </b>
             </div>
-            
+
             <div className="cartfirst_div">
                 <small className='notification'>11</small>
                 <Link to="/cart" className='cart'> <ShoppingCartIcon />               <span>Cart</span>
                 </Link>
-                </div>
+            </div>
         </div>
     )
 }

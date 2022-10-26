@@ -59,9 +59,11 @@
 .hello {
     font-size: 12px;
     flex: 1;
+    text-decoration: none;
     align-items: center;
     justify-content: center;
     display: flex;
+    color: #ffff;
     flex-direction: column;
 }
 

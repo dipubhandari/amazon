@@ -7,7 +7,16 @@
 .aidImage {
     flex: 9;
 }
-
+.continue__shopping__button{
+    background-color: orange;
+        width: 99%;
+        color: #fff;
+        border: 1px solid black;
+        display: flex;
+        justify-content: center;
+        text-decoration: none;   
+        padding: 5px;
+}
 .aidImage img {}
 
 .asket_title {
