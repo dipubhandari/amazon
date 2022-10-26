@@ -7,9 +7,9 @@ import { Link } from 'react-router-dom';
 const Header = () => {
     return (
         <div className='header'>
-            <div className="logo">
+            <Link to='/' className="logo">
                 <img src="https://logos-world.net/wp-content/uploads/2020/04/Amazon-Symbol.jpg" alt="" width='100px' height="auto" />
-            </div>
+            </Link>
             <div className="wheredeliver">
                 <LocationOnIcon />
                 {/*  */}

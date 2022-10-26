@@ -5,7 +5,7 @@ const Register = () => {
     <div>
           <section className="containerlogin"> <br/>
               <section className="content">
-                  <h1 className="login_title"><span><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcThqGQTQ3FusJOaIcrrpeMDc6ZfBCtxfsAAzA&usqp=CAU" alt="" /></span> <noframes></noframes></h1>
+                  <h1 className="login_title"><span><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRNRNpR6wsD8fPQQ19EWJa93PmoGHIDscU0eQ&usqp=CAU" alt="" /></span> <noframes></noframes></h1>
                   <section>
                       <form action="" method="post" className="form_login">
                           <input type="text" name="name" placeholder="Enter Full Name"/>

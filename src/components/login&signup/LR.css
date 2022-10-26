@@ -1,31 +1,39 @@
-
 * {
     margin: 0;
     padding: 0;
 }
 
 .containerlogin {
-    background-color: black;
     min-height: 100vh;
     width: 100%;
 }
 
 
-.login_title span img{
+.login_title span img {
     width: 100px;
     display: flex;
-    margin: auto 400px;
-}
-.content {
-    background-color: black;
-    margin: auto;
-    color: aliceblue;
-    padding: 120px;
-    display: flex;
-    /* box-shadow: 0 0 10px 10px lightgreen; */
-    flex-direction: column;
+    margin: auto auto;
 }
 
+.content {
+    background-color: #ffff;
+    margin: 0px auto;
+    color: aliceblue;
+    display: inline;
+    width: auto;
+    border: 1px solid grey;
+    flex-direction: column;
+}
+.logincondition{
+    color:darkslategrey;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+       padding: 0px;
+    font-weight: bold;
+    font-size: 8px;
+}
 .login_text {
 
     margin: auto;
@@ -71,4 +79,7 @@ select {
 .signup_text {
     color: aliceblue;
     margin: auto;
+    color: orange;
+    font-size: 17px;
+    font-family: serif;
 }
