@@ -10,7 +10,7 @@ const Allorder = () => {
             {/* adds start */}
             <div className="aid">
                 <div className="aidImage">
-                    <img src="https://logos-world.net/wp-content/uploads/2020/04/Amazon-Symbol.jpg" alt="" width='89%' height='100px' />
+                    <img src="" alt="" width='89%' height='100px' />
                     <div className='asket_title'>
                         Your All Orders Till Now
                     </div>
