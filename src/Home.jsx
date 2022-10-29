@@ -4,6 +4,7 @@ import Header from './components/header/Header';
 import Banner from './components/Banner/Banner';
 import Products from './components/Product/Products';
 import Footer from './components/Footer/Footer';
+import Product from './redux/Containers/Product';
 
 function Home() {
   return (
@@ -18,7 +19,7 @@ function Home() {
 
       </div>
       <div className='all'>
-        <Products />
+        <Product />
 
       </div>
        

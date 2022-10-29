@@ -37,7 +37,7 @@ const Allorder = () => {
                     <span>Price: $9999</span>
 
 
-                    <button className='hatau'>Continue Shop</button>
+                    <button className='hatau'> <Link to='/' className='hello'>Shop</Link> </button>
                 </div>
             </div>
 
@@ -51,7 +51,7 @@ const Allorder = () => {
                     <div>The Name of the</div>
                     <p className='gradeicon'> <GradeIcon /> <GradeIcon /> <GradeIcon /> <GradeIcon /> <GradeIcon /></p>
                     <span>Price: $9999</span>
-                    <button className='hatau'>Continue Shop</button>
+                    <button className='hatau'> <Link to='/' className='hello'>Shop</Link> </button>
                 </div>
             </div>
             {/* items on the cart ? */}

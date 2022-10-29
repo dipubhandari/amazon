@@ -104,10 +104,15 @@
     cursor: pointer;
 }
 .notification{
+    padding: 2px;
+    top: 0;
+    height: 9px;
+    justify-content: center;
+    align-items: center;
     width: 10px;
-    background-color: red;
-    font-size: 7px;
-    display: inline;
+    background-color: orangered;
+    font-size: 9px;
+    display: flex;
     border-radius: 50%;
-    border: 2px solid red;
+    /* border: 2px solid red; */
 }
