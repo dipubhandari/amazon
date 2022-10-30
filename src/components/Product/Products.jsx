@@ -11,7 +11,7 @@ const Product = (props) => {
                 return <div className='data'>
 
                     <span className='data-name'>{product.name}</span>
-                    <span className='price'>{product.mrp}</span>
+                    <span className='price'>${product.mrp}</span>
                     <b className='rating'> <GradeIcon /><GradeIcon /><GradeIcon /><GradeIcon />
 
                         <GradeIcon /></b>{/*<GradeIcon />*/}
@@ -27,7 +27,8 @@ const Product = (props) => {
 
                             () => {
                                 props.ADD_TO_CART({
-                                    id: product.id, name: product.name,
+                                    id: product.id,
+                                    quantity: 1, name: product.name,
                                     mrp: product.mrp, img: product.img
                                 })
                             }

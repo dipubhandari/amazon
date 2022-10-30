@@ -4,15 +4,44 @@ import GradeIcon from '@mui/icons-material/Grade'
 import { useSelector } from 'react-redux'
 import './CssForCart.css'
 import { useState } from 'react'
+import { useEffect } from 'react'
 const Cart = (props) => {
-  const Pro = useSelector((st) => {
-    return st
+  //getting the products from the store using redux and useselector hooks
+  const Pro = useSelector((state) => {
+    return state
   })
-  const [info,setInfo] = useState(false)
+  // variable for remove from cart and to render component so that it update on the spot 
+  const [info, setInfo] = useState(false)
+  // state for the products details from store add by use
   const [PRODUCTS, setProducts] = useState(Pro.cartReducer.cartData)
-  React.useEffect(()=>{
+  // setting the products once product is removed 
+  React.useEffect(() => {
     setProducts(Pro.cartReducer.cartData)
-  },[info])
+  }, [info])
+
+  // calculation starts
+  
+  const getNoOfProducts = (e, id) => {
+    const no = e.target.value
+    // console.log(no)
+
+    //  updating the no of product in Products object in specific id from above
+    PRODUCTS.forEach((elem) => {
+      console.log(elem.id == id)
+      if (elem.id == id) {
+        elem.quantity = no
+      }
+    })
+  }
+  // CALCULATION OF PRICE
+
+  let total = 0;
+  console.log("totol price")
+  PRODUCTS.forEach((elem) => {
+    total += parseInt(elem.quantity) * parseInt(elem.mrp)
+  }
+  )
+  // calculation ends
 
   return (
     <>
@@ -25,7 +54,7 @@ const Cart = (props) => {
           </div>
         </div>
         <div className="sub__total">
-          <b> Sub Total ({Pro.cartReducer.cartData.length} items): $90</b>
+          <b> Sub Total ({Pro.cartReducer.cartData.length} items): ${total}</b>
           <button>Click To Purchase</button>
         </div>
       </div>
@@ -41,18 +70,26 @@ const Cart = (props) => {
               <span>Price: $ {element.mrp}</span>
               <section className="inc__dec">
                 <span>Quantity:</span>
-                <select><option value="1">1</option><option value="2">2</option><option value="1">3</option><option value="4">4</option><option value="5">5</option></select>
-              </section><button 
+                <input
+                  placeholder={element.quantity}
+                  type="number"
+                  onChange={(e) => getNoOfProducts(e, element.id)}
+                  min={1}
+                  max={10000}
+                  // value={element.quantity}
+                  className='quantity' />
+                {/* <select><option value="1">1</option><option value="2">2</option><option value="1">3</option><option value="4">4</option><option value="5">5</option></select> */}
+              </section><button
                 onClick={
-              
-                  ()=>{
-                   props.REMOVE_TO_CART(element.id) 
-                   setInfo(Math.random()) 
-                  
+
+                  () => {
+                    props.REMOVE_TO_CART(element.id)
+                    setInfo(Math.random())
+
                   }
-               
+
                 }
-              className='hatau'
+                className='hatau'
               >Remove</button>
             </div>
           </div>
