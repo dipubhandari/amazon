@@ -8,8 +8,11 @@ const Cart = (props) => {
   const Pro = useSelector((st) => {
     return st
   })
-  console.log(Pro.cartReducer.cartData.length)
+  const [info,setInfo] = useState(false)
   const [PRODUCTS, setProducts] = useState(Pro.cartReducer.cartData)
+  React.useEffect(()=>{
+    setProducts(Pro.cartReducer.cartData)
+  },[info])
 
   return (
     <>
@@ -39,7 +42,18 @@ const Cart = (props) => {
               <section className="inc__dec">
                 <span>Quantity:</span>
                 <select><option value="1">1</option><option value="2">2</option><option value="1">3</option><option value="4">4</option><option value="5">5</option></select>
-              </section><button className='hatau'>Remove</button>
+              </section><button 
+                onClick={
+              
+                  ()=>{
+                   props.REMOVE_TO_CART(element.id) 
+                   setInfo(Math.random()) 
+                  
+                  }
+               
+                }
+              className='hatau'
+              >Remove</button>
             </div>
           </div>
         </>

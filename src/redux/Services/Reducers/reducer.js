@@ -11,7 +11,7 @@ export default function cartReducer(state = InitialState, action) {
       let exist = true
       state.cartData.map((data) => {
         if (action.data['id'] == data['id']) {
-           exist = false
+          exist = false
         }
       }
       )
@@ -22,17 +22,19 @@ export default function cartReducer(state = InitialState, action) {
           cartData: [...state.cartData, action.data]
         }
       }
-      else {
-       
-      }
+    
+    case 'REMOVE_TO_CART': 
+       const cart = state.cartData.filter((e)=>{
+          return (e['id'] != action.data)
+        })
+      
+    return {
 
-
-
-
-
-    case 'REMOVE_TO_CART': state.cartData.filter((removedCart) => {
-      return { cartData: [removedCart != action.data] }
-    })
+          ...state,
+          cartData: cart
+        }
+        
+        break;
     default:
 
       return state
