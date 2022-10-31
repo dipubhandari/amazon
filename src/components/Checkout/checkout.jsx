@@ -9,7 +9,7 @@ import { Link } from 'react-router-dom'
 const Checkout = (props) => {
     //getting the products from the store using redux and useselector hooks
     const Pro = useSelector((state) => {       return state  })
-// total after the proceed to checkout
+// total after the proceed to checkout 
 
 const [total,setTota] = useState(0)
     useEffect(() => {
