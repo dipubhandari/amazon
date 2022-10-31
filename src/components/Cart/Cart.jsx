@@ -20,7 +20,7 @@ const Cart = (props) => {
   }, [info])
 
   // calculation starts
-  
+
   const getNoOfProducts = (e, id) => {
     const no = e.target.value
     // console.log(no)
@@ -32,15 +32,42 @@ const Cart = (props) => {
         elem.quantity = no
       }
     })
-  }
-  // CALCULATION OF PRICE
-
-  let total = 0;
+  } 
+  let totals = 0;
   console.log("totol price")
   PRODUCTS.forEach((elem) => {
-    total += parseInt(elem.quantity) * parseInt(elem.mrp)
+    totals += parseInt(elem.quantity) * parseInt(elem.mrp)
   }
   )
+  // CALCULATION OF PRICE
+  let [total,setTota] = useState(0)
+
+  const totalFun = () => {
+    let totals = 0;
+    PRODUCTS.forEach((elem) => {
+      totals += parseInt(elem.quantity) * parseInt(elem.mrp)
+    }
+    )
+    setTota(totals)
+    // console.log(total)
+  }
+  // totalFun()
+  useEffect(() => {
+    let total = 0;
+    Pro.cartReducer.cartData.forEach((elem) => {
+      total += parseInt(elem.quantity) * parseInt(elem.mrp)
+    }
+    )
+    console.log(total)
+    setTota(total)
+  }, [info])
+
+
+  useEffect(() => {
+    console.log("render")
+   
+  }, [info])
+
   // calculation ends
 
   return (
@@ -73,7 +100,11 @@ const Cart = (props) => {
                 <input
                   placeholder={element.quantity}
                   type="number"
-                  onChange={(e) => getNoOfProducts(e, element.id)}
+                  onChange={(e) => {
+                    getNoOfProducts(e, element.id);
+                    totalFun();
+                  }
+                  }
                   min={1}
                   max={10000}
                   // value={element.quantity}
