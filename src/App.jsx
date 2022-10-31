@@ -7,6 +7,7 @@ import Login from './components/login&signup/Login'
 import Register from './components/login&signup/Register'
 import Allorder from './components/UserOrders/Allorder';
 import Cart from "./redux/Containers/Cartcontainer"
+import Checkout from './components/Checkout/checkout';
 const App = () => {
     return (
         <div>
@@ -16,6 +17,7 @@ const App = () => {
                     <Route path='signup' element={<Register />} />
                     <Route path='payment' element={<Payment />} />
                     <Route path='/cart' element={< Cart/>} />
+                    <Route path='/checkout' element={<Checkout />} />
                     <Route path='/orders' element={<Allorder />} />
                 </Routes>
             </BrowserRouter>

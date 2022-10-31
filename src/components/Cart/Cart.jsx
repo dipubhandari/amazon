@@ -5,6 +5,7 @@ import { useSelector } from 'react-redux'
 import './CssForCart.css'
 import { useState } from 'react'
 import { useEffect } from 'react'
+import { Link } from 'react-router-dom'
 const Cart = (props) => {
   //getting the products from the store using redux and useselector hooks
   const Pro = useSelector((state) => {
@@ -32,7 +33,7 @@ const Cart = (props) => {
         elem.quantity = no
       }
     })
-  } 
+  }
   let totals = 0;
   console.log("totol price")
   PRODUCTS.forEach((elem) => {
@@ -40,7 +41,7 @@ const Cart = (props) => {
   }
   )
   // CALCULATION OF PRICE
-  let [total,setTota] = useState(0)
+  let [total, setTota] = useState(0)
 
   const totalFun = () => {
     let totals = 0;
@@ -65,7 +66,7 @@ const Cart = (props) => {
 
   useEffect(() => {
     console.log("render")
-   
+
   }, [info])
 
   // calculation ends
@@ -82,7 +83,20 @@ const Cart = (props) => {
         </div>
         <div className="sub__total">
           <b> Sub Total ({Pro.cartReducer.cartData.length} items): ${total}</b>
-          <button>Click To Purchase</button>
+
+          {
+            // if exist in cart how Continue button if not then show 
+            // shopping button
+
+            (Pro.cartReducer.cartData.length > 0) ?
+              <button> <Link to='/checkout' className='hello'> Click To Purchase</Link></button>
+              
+              // {/*</button>*/}
+              :
+              <button><Link to='/' className="hello">Continue Buy</Link></button>
+
+          }
+
         </div>
       </div>
       {PRODUCTS.map((element, index) => {

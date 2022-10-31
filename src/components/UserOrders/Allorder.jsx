@@ -10,7 +10,7 @@ const Allorder = () => {
             {/* adds start */}
             <div className="aid">
                 <div className="aidImage">
-                    <img src="" alt="" width='89%' height='100px' />
+                    <img src="https://m.media-amazon.com/images/I/61TD5JLGhIL._SX3000_.jpg" alt="" width='89%' height='100px' />
                     <div className='asket_title'>
                         Your All Orders Till Now
                     </div>
@@ -24,22 +24,7 @@ const Allorder = () => {
             {/* aid  */}
 
             {/* items on the cart ..*/}
-            <div className="add__container">
-
-                <div className="leftCartImage">
-                    <img src="" alt="" />
-                </div>
-                <div className="rightCart">
-
-                    <div>The Name of the</div>
-                    <p className='gradeicon'> <GradeIcon /> <GradeIcon /> <GradeIcon /> <GradeIcon /> <GradeIcon /></p>
-
-                    <span>Price: $9999</span>
-
-
-                    <button className='hatau'> <Link to='/' className='hello'>Shop</Link> </button>
-                </div>
-            </div>
+            
 
             <div className="add__container">
 
