@@ -71,6 +71,11 @@ const Cart = (props) => {
 
   // calculation ends
 
+
+  // check if user is logged in or not
+
+  const [userLogin,setUserLoggedIn] = useState(false)
+
   return (
     <>
       <Header length={Pro.cartReducer.cartData.length} />
@@ -89,7 +94,7 @@ const Cart = (props) => {
             // shopping button
 
             (Pro.cartReducer.cartData.length > 0) ?
-              <button> <Link to='/checkout' className='hello'> Click To Purchase</Link></button>
+              <button> <Link to={(userLogin == true)?'/checkout' :'/login'} className='hello'> Click To Purchase</Link></button>
               
               // {/*</button>*/}
               :

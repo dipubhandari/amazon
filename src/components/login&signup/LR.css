@@ -83,3 +83,7 @@ select {
     font-size: 17px;
     font-family: serif;
 }
+
+.msg{
+    color: chartreuse;
+}

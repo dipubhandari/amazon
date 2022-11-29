@@ -1,0 +1,135 @@
+.aid {
+    display: flex;
+    width: 100%;
+    margin: 8px 0px;
+}
+
+.aidImage {
+    flex: 9;
+}
+
+.continue__shopping__button {
+    background-color: orange;
+    width: 99%;
+    color: #fff;
+    border: 1px solid black;
+    display: flex;
+    justify-content: center;
+    text-decoration: none;
+    padding: 5px;
+}
+
+.aidImage img {}
+
+.asket_title {
+    font-weight: bold;
+    display: block;
+
+
+    width: 50%;
+    font-family: 'Courier New', Courier, monospace;
+    margin: auto;
+}
+
+.hatau {
+    background-color: orange;
+    width: 80%;
+    color: #fff;
+
+
+    padding: 5px;
+}
+
+.sub__total {
+    background-color: rgb(199, 206, 214);
+    flex: 2;
+    display: grid;
+    margin-right: 30px;
+    padding: 10px;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.add__container {
+    width: 100%;
+    display: flex;
+    width: 50%;
+    min-height: 300px;
+    margin: 9px 70px;
+    border: 1px solid grey;
+}
+
+.leftCartImage img {
+    display: flex;
+    height: 100%;
+    width: 100%;
+}
+
+.leftCartImage {
+    padding: 20px;
+    height: auto;
+    width: 50%;
+}
+
+.rightCart {
+    display: flex;
+    font-weight: bold;
+    flex-direction: column;
+    gap: 30px;
+    width: 100%;
+    justify-content: center;
+    align-items: flex-start;
+    margin: 10px;
+}
+
+.gradeicon {
+    color: orange;
+}
+
+.sub__total button {
+    color: aliceblue;
+    font-weight: normal;
+    padding: 2px;
+    background-color: orange;
+}
+
+.quantity {
+    width: 50px;
+
+}
+
+.payment {
+    display: flex;
+    flex: 1;
+    background-color: ghostwhite;
+    /* margin: 20px; */
+    padding: 39px;
+    width: 70%;
+    border: 1px solid grey;
+    border-radius: 1px;
+}
+
+.details {
+    flex: 1;
+}
+
+.form__content {
+    display: grid;
+    padding: 6px;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 8px;
+    font-weight: normal;
+}
+.form__content label{
+    display: flex;
+   
+}
+.form__content input{
+   margin: 9px 0px;
+    width: 57%;
+    font-family: 'Times New Roman', Times, serif;
+   /* padding: 16px; */
+   padding: 11px;
+   border: 0.5px solid grey;
+}

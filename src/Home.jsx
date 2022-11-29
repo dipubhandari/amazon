@@ -14,7 +14,7 @@ function Home() {
         <Header />
       </div>
 
-      <div>
+      <div className='slider_content'>
         <Banner />
 
       </div>
@@ -25,7 +25,7 @@ function Home() {
        
        <div className='footer'>
         <Footer/>
-       </div>
+       </div> 
 
     </div>
   );
