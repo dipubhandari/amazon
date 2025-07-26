@@ -10,6 +10,8 @@ import Cart from "./redux/Containers/Cartcontainer";
 import Checkout from "./components/Checkout/checkout";
 import axios from "axios";
 import SERVER_URL from "./config";
+import Dashboard from "./pages/Admin/Dashboard";
+import AddProduct from "./pages/Admin/AddProduct";
 
 const App = () => {
   // islogged in state
@@ -45,6 +47,9 @@ const App = () => {
             element={isLoggedIn ? <Checkout /> : <Login />}
           />
           <Route path="/orders" element={<Allorder />} />
+          {/* admin */}
+          <Route path="/admin/dashboard" element={<Dashboard />} />
+          <Route path="/admin/add-product" element={<AddProduct />} />
         </Routes>
       </BrowserRouter>
     </div>

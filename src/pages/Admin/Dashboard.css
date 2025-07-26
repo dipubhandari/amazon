@@ -1,0 +1,136 @@
+/* CSS */
+
+.dashboard-wrapper {
+  display: flex;
+  min-height: 100vh;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background: #f5f7fa;
+}
+
+.sidebar {
+  width: 220px;
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  color: white;
+  padding: 30px 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+}
+
+.sidebar h2 {
+  margin-bottom: 30px;
+  font-size: 24px;
+  text-align: center;
+}
+
+.sidebar nav ul {
+  list-style: none;
+  padding: 0;
+  text-decoration: none;
+}
+
+.sidebar nav ul li {
+  text-decoration: none;
+  padding: 12px 0;
+  cursor: pointer;
+  transition: background 0.3s;
+  border-radius: 8px;
+  text-align: center;
+}
+.sidebar-link {
+  display: block;
+  width: 100%;
+  color: inherit; /* inherit from li (white) */
+  text-decoration: none;
+  padding: 0;
+}
+.sidebar nav ul li.active,
+.sidebar nav ul li:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.dashboard-content {
+  flex-grow: 1;
+  padding: 30px;
+}
+
+.dashboard-header {
+  margin-bottom: 30px;
+}
+
+.dashboard-header h1 {
+  font-size: 28px;
+  color: #333;
+}
+
+.dashboard-widgets {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+  margin-bottom: 40px;
+}
+
+.widget-card {
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.widget-card h3 {
+  margin-bottom: 10px;
+  color: #555;
+}
+
+.widget-card p {
+  font-size: 24px;
+  font-weight: bold;
+  color: #333;
+}
+
+.dashboard-section h2 {
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.orders-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.orders-table th,
+.orders-table td {
+  padding: 15px;
+  text-align: left;
+}
+
+.orders-table thead {
+  background: #764ba2;
+  color: white;
+}
+
+.orders-table tbody tr:nth-child(even) {
+  background: #f0f0f0;
+}
+
+.orders-table tbody tr:hover {
+  background: #e0e0e0;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .sidebar {
+    display: none;
+  }
+  .dashboard-content {
+    padding: 20px;
+  }
+  .dashboard-widgets {
+    grid-template-columns: 1fr;
+  }
+}
