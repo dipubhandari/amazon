@@ -2,14 +2,20 @@ import React, { useState } from "react";
 import "./AddProduct.css";
 
 import Sidebar from "./components/Sidebar";
+import axios from "axios";
 
 // This component allows admins to add new products to the inventory
 export default function AddProduct() {
   const [imagePreview, setImagePreview] = useState(null);
   const [productData, setProductData] = useState({ productName: "" });
 
-  const handleImageChange = (e) => {
+  const handleProductImage = (e) => {
+    console.log("This works");
+    setProductData({ ...productData, [e.target.name]: e.target.files[0] });
     const file = e.target.files[0];
+    console.log(file);
+    console.log(productData);
+
     if (file) {
       const reader = new FileReader();
       reader.onloadend = () => {
@@ -19,13 +25,17 @@ export default function AddProduct() {
     }
   };
 
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    await axios.post("http://localhost:5000/api/admin/add-product", () => {});
+  };
   return (
     <div className="dashboard-wrapper">
       <Sidebar />
       <main className="dashboard-content">
         <div className="add-product-wrapper">
           <h1>Add New Product</h1>
-          <form className="product-form">
+          <form className="product-form" onSubmit={handleSubmit}>
             <div className="form-group">
               <label>Product Name</label>
               <input
@@ -73,7 +83,8 @@ export default function AddProduct() {
               <input
                 type="file"
                 accept="image/*"
-                onChange={handleImageChange}
+                name="productImage"
+                onChange={handleProductImage}
               />
               {imagePreview && (
                 <img
