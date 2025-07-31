@@ -24,10 +24,11 @@ export default function AddProduct() {
       reader.readAsDataURL(file);
     }
   };
-
   const handleSubmit = async (e) => {
     e.preventDefault();
-    await axios.post("http://localhost:5000/api/admin/add-product", () => {});
+
+    console.log("This works");
+    await axios.post("http://localhost:5000/admin/add-product", productData);
   };
   return (
     <div className="dashboard-wrapper">

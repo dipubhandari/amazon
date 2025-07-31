@@ -2,6 +2,7 @@ import express from "express";
 import dotenv from "dotenv";
 import DATABASE_CONNECT from "./database/database.js";
 import userRouter from "./routes/userRoute.js";
+import adminRouter from "./routes/adminRoute.js";
 
 dotenv.config();
 // instances
@@ -16,6 +17,7 @@ DATABASE_CONNECT(DATABASE_URL);
 
 // routes
 app.use("/api", userRouter);
+app.use("/admin", adminRouter);
 
 // listening the server
 app.listen(PORT, () => {
